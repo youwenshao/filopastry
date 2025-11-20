@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Coding Test</title>
+</head>
+<body>
+    <h1>Testing Core Infrastructure</h1>
+    <p>Open the browser console and check for:</p>
+    <ul>
+        <li>✓ Strudel engine initialization</li>
+        <li>✓ Synthesizer initialization</li>
+        <li>✓ Code editors loading</li>
+        <li>✓ Audio context creation</li>
+    </ul>
+    
+    <script type="module">
+        import { strudelEngine } from './js/strudel-engine.js';
+        import { synthesizer } from './js/synthesizer.js';
+        
+        async function testSetup() {
+            console.log('🧪 Testing core infrastructure...');
+            
+            // Test Strudel
+            const strudelOk = await strudelEngine.initialize();
+            console.log('Strudel:', strudelOk ? '✓ OK' : '✗ FAILED');
+            
+            // Test Synthesizer
+            const synthOk = await synthesizer.initialize();
+            console.log('Synthesizer:', synthOk ? '✓ OK' : '✗ FAILED');
+            
+            // Test pattern library
+            console.log('Pattern Library:', PatternLibrary ? '✓ OK' : '✗ FAILED');
+            
+            if (strudelOk && synthOk) {
+                console.log('🎉 All core systems ready!');
+            } else {
+                console.log('❌ Some systems failed to initialize');
+            }
+        }
+        
+        testSetup();
+    </script>
+</body>
+</html>

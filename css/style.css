@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.app-header {
+    background: #2d2d2d;
+    padding: 1rem;
+    border-bottom: 2px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app-header h1 {
+    color: #ff6b6b;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.controls button {
+    background: #4a4a4a;
+    color: white;
+    border: 1px solid #666;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.controls button:hover {
+    background: #5a5a5a;
+}
+
+.bpm-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bpm-control input {
+    background: #333;
+    color: white;
+    border: 1px solid #666;
+    padding: 0.25rem;
+    border-radius: 3px;
+    width: 60px;
+}
+
+/* Editor Container */
+.editor-container {
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.performer-editor {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #2d2d2d;
+    border-radius: 8px;
+    border: 1px solid #444;
+    overflow: hidden;
+}
+
+#performer-a {
+    border-left: 4px solid #8be9fd; /* Cyan for Dark Wave */
+}
+
+#performer-b {
+    border-left: 4px solid #50fa7b; /* Green for House */
+}
+
+.editor-header {
+    background: #3d3d3d;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.editor-header h2 {
+    font-size: 1.1rem;
+    color: inherit;
+}
+
+.eval-btn {
+    background: #6272a4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.eval-btn:hover {
+    background: #7284b4;
+}
+
+.code-editor {
+    flex: 1;
+    min-height: 300px;
+    background: #1e1e1e;
+    color: #e0e0e0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border: none;
+    resize: none;
+    padding: 10px;
+}
+
+.output {
+    background: #1e1e1e;
+    padding: 0.75rem;
+    border-top: 1px solid #444;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+/* Suggestions Panel */
+#suggestions-panel {
+    background: #2d2d2d;
+    border-top: 1px solid #444;
+    padding: 1rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#suggestions-panel h3 {
+    color: #ffb86c;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Bar */
+.status-bar {
+    background: #2d2d2d;
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.status {
+    color: #50fa7b;
+}
+
+.error {
+    color: #ff5555;
+}
+
+.hidden {
+    display: none;
+}
+
+/* CodeMirror Theme Overrides */
+.cm-editor {
+    height: 100%;
+    font-size: 14px;
+}
+
+.cm-gutters {
+    background: #2d2d2d !important;
+    border-right: 1px solid #444 !important;
+}
+
+.cm-activeLine {
+    background: #3d3d3d !important;
+}
+
+.CodeMirror {
+    height: 100%;
+    background: #1e1e1e !important;
+    color: #e0e0e0 !important;
+}

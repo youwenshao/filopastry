@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live-Coding Performance System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Live-Coding Performance System</h1>
+            <div class="controls">
+                <button id="start-audio">Start Audio</button>
+                <button id="stop-all">Stop All</button>
+                <div class="bpm-control">
+                    <label>BPM: </label>
+                    <input type="number" id="bpm" value="120" min="60" max="180">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Editor Area -->
+        <div class="editor-container">
+            <!-- Performer A (Dark-Wave) -->
+            <div class="performer-editor" id="performer-a">
+                <div class="editor-header">
+                    <h2>Performer A - Dark Wave</h2>
+                    <button class="eval-btn" data-editor="a">Run Code</button>
+                </div>
+                <div id="editor-a" class="code-editor"></div>
+                <div class="output" id="output-a"></div>
+            </div>
+
+            <!-- Performer B (House) -->
+            <div class="performer-editor" id="performer-b">
+                <div class="editor-header">
+                    <h2>Performer B - House</h2>
+                    <button class="eval-btn" data-editor="b">Run Code</button>
+                </div>
+                <div id="editor-b" class="code-editor"></div>
+                <div class="output" id="output-b"></div>
+            </div>
+        </div>
+
+        <!-- AI Suggestions Panel (for Phase 2) -->
+        <div id="suggestions-panel" class="hidden">
+            <h3>AI Suggestions</h3>
+            <div id="suggestions-list"></div>
+        </div>
+
+        <!-- Status Bar -->
+        <footer class="status-bar">
+            <div id="connection-status" class="status">Audio: Stopped</div>
+            <div id="error-display" class="error hidden"></div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
