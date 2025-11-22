@@ -3,20 +3,21 @@
     "version": "1.0.0",
     "type": "module",
     "scripts": {
-      "dev": "vite",
-      "build": "vite build"
+        "dev": "vite",
+        "build": "vite build"
     },
     "dependencies": {
-      "@strudel.cycles/core": "^0.8.0",
-      "@strudel.cycles/webaudio": "^0.8.0",
-      "@codemirror/commands": "^6.2.4",
-      "@codemirror/lang-javascript": "^6.1.9",
-      "@codemirror/language": "^6.9.2",
-      "@codemirror/state": "^6.2.1",
-      "@codemirror/theme-one-dark": "^6.1.2",
-      "@codemirror/view": "^6.17.1"
+        "@codemirror/commands": "^6.2.4",
+        "@codemirror/gutter": "^6.2.1",
+        "@codemirror/lang-javascript": "^6.1.9",
+        "@codemirror/language": "^6.9.2",
+        "@codemirror/matchbrackets": "^6.1.0",
+        "@codemirror/closebrackets": "^6.1.0",
+        "@codemirror/state": "^6.2.1",
+        "@codemirror/theme-one-dark": "^6.1.2",
+        "@codemirror/view": "^6.17.1"
     },
     "devDependencies": {
-      "vite": "^4.5.14"
+        "vite": "^4.5.14"
     }
-  }
+}
